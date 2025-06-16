@@ -1,0 +1,16 @@
+{
+  "name": "english-conversation-practice",
+  "version": "1.0.0",
+  "description": "English conversation practice website with AI",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "socket.io": "^4.7.2"
+  }
+} 
