@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>English Conversation Practice</title>
     <style>
         * {
@@ -11,10 +11,14 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
-            height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -29,6 +33,7 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            position: relative;
         }
 
         .chat-header {
@@ -162,7 +167,12 @@
             .chat-container {
                 margin: 0;
                 border-radius: 0;
-                height: 100vh;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
             }
 
             .message-content {
@@ -172,6 +182,14 @@
             .tip-box {
                 width: calc(100% - 40px);
                 bottom: 80px;
+            }
+
+            .input-container {
+                position: sticky;
+                bottom: 0;
+                background: white;
+                padding: 10px;
+                border-top: 1px solid #eee;
             }
         }
     </style>
